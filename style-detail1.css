@@ -1,0 +1,214 @@
+/* =========================
+   STYLE KHUSUS HALAMAN DETAIL KEGIATAN
+========================= */
+
+.detail-section {
+    padding: 50px 0;
+}
+
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.badge-kategori {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.detail-main h1 {
+    font-size: 32px;
+    color: #183451;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.detail-meta-info {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.detail-img-box {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.detail-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-article p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.detail-article h3 {
+    font-size: 20px;
+    color: #183451;
+    margin: 30px 0 15px 0;
+}
+
+.detail-article ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.detail-article li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* Sidebar Kotak Kanan */
+.sidebar-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 90px;
+}
+
+.sidebar-card h3 {
+    font-size: 18px;
+    color: #183451;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+.status-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.sidebar-info-list li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.sidebar-info-list strong {
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.sidebar-info-list span {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.btn-sidebar-wa {
+    display: block;
+    text-align: center;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-sidebar-wa:hover {
+    background-color: #20ba5a;
+}
+
+/* Responsif untuk HP / Tablet */
+@media (max-width: 900px) {
+    .detail-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .sidebar-card {
+        position: static;
+    }
+}
+/* =========================
+   WATERMARK / LOGO DI POJOK GAMBAR
+========================= */
+
+/* Pastikan kotak gambar memiliki posisi relative agar watermark tidak keluar jalur */
+.detail-img-box {
+    position: relative; 
+}
+
+/* Kotak Watermark di Pojok Kanan Bawah */
+/* =========================
+   WATERMARK LOGO DI POJOK GAMBAR
+========================= */
+
+.detail-img-box {
+    position: relative; /* Wajib agar watermark bisa diposisikan di dalam kotak gambar */
+}
+
+.image-watermark {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(11, 15, 25, 0.85); /* Background gelap agak transparan agar warna LED makin kontras */
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.watermark-brand {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    /* Efek gradasi warna-warni khas LED */
+    background: linear-gradient(
+        to right,
+        #00f2fe,
+        #4facfe,
+        #00ff87,
+        #ffe600,
+        #ff6b6b,
+        #ff007f
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Efek pendaran cahaya (glowing) */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+}
